@@ -1,13 +1,55 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
+
 <body>
-    <h1>Welcome to django one again</h1>
-    <h3>{{message}}</h3>
+    <div class="container">
+        <div class="navbar">
+            <div class="left-nav">
+                <h2>DMD donators</h2>
+            </div>
+            <div class="right-nav">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Organizations</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Donate</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="top-section">
+                <div class="left-content">
+                    <h2>Helping communities during disasters</h2>
+                    <h3>Organize, volunteer, and donate to provide relief when it's needed most...</h3>
+                    <div class="buttons">
+                        <a href="#"><button>Join as a Volunteer</button></a>
+                        <a href="#"><button>Donate Supplies or Funds</button></a>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <h2>Streamlining Disaster Relief Coordination</h2>
+                    <p>When disaster strikes, time and resources are critical. Coordinating volunteers, donations, and
+                        supplies can be overwhelming. This platform simplifies the process, ensuring that relief reaches
+                        those who need it most.This Platform brings together relief
+                        organizations, volunteers, and donors in one place, making it easier to coordinate efforts and
+                        resources.</p>
+                </div>
+            </div>
+            <div class="second-section">
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
