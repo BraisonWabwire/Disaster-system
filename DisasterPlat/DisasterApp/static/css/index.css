@@ -25,7 +25,7 @@
     /* background-color: #f2f3f7; */
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 80px;
     color: white;
 
 }
@@ -51,8 +51,9 @@
     color: white;
 }
 
-.navbar .right-nav ul li a:hover {
-    color: #5954c7;
+.navbar .right-nav ul li:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .main-content {
