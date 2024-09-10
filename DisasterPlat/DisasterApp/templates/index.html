@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -17,11 +18,19 @@
             </div>
             <div class="right-nav">
                 <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about us</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
                     <li><a href="#">How it works</a></li>
                     <li><a href="#">Organizations</a></li>
-                    <li><a href="#">Volunteer</a></li>
+                    <li class="volunteer">
+                        <a href="#">Volunteer</a>
+                        <i class="fa-solid fa-caret-down"></i>
+                        <div class="volunteer_dropdown">
+                                <a href="{% url 'signup.html' %}">Signup</a>
+                                <a href="#">Login</a>
+                        </div>
+                    </li>
+                    
                     <li><a href="#">Donate</a></li>
                     <li><a href="#">Contact us</a></li>
                 </ul>
@@ -38,12 +47,17 @@
                     </div>
                 </div>
                 <div class="right-content">
-                    <h2>Streamlining Disaster Relief Coordination</h2>
-                    <p>When disaster strikes, time and resources are critical. Coordinating volunteers, donations, and
-                        supplies can be overwhelming. This platform simplifies the process, ensuring that relief reaches
-                        those who need it most.This Platform brings together relief
-                        organizations, volunteers, and donors in one place, making it easier to coordinate efforts and
-                        resources.</p>
+                    <div class="context">
+                        <h2>Streamlining Disaster Relief Coordination</h2>
+                        <p>When disaster strikes, time and resources are critical. Coordinating volunteers, donations,
+                            and
+                            supplies can be overwhelming. This platform simplifies the process, ensuring that relief
+                            reaches
+                            those who need it most.This Platform brings together relief
+                            organizations, volunteers, and donors in one place, making it easier to coordinate efforts
+                            and
+                            resources.</p>
+                    </div>
                 </div>
             </div>
             <div class="second-section">
