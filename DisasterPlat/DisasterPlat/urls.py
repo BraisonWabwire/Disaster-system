@@ -21,5 +21,8 @@ from DisasterApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name='index'),
-    path('', views.signup,name='signup'),
+    path('Register/', views.Register,name='Register'),
+    path('login/', views.loginPage,name='login'),
+    path('home/', views.home,name='home'),
+
 ]

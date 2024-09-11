@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="{% static 'css/Register.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-box">
+                    <img src="{% static 'images/logo2.png' %}" alt="log pic" srcset="" style="width: 100px; height: 100px;">
+                    <h2>Signup</h2>
+
+                    {{form.username}}
+
+                    {{form.email}}
+
+                    {{form.password1}}
+
+                    {{form.password2}}
+                    <div class="buttons">
+                        <button type="submit">Signup</button>
+                        <h2>Already have an account? Click <a href="{% url 'login' %}">here</a> to login</h2>
+                        <h2>Return to <a href="{% url 'index' %}">home</a></h2>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        var form_fields=document.getElementsByTagName('input')
+        form_fields[1].placeholder='username'
+        form_fields[2].placeholder='email'
+        form_fields[3].placeholder='password1'
+        form_fields[4].placeholder='password2'
+
+        // for(var field in form_fields){
+        //     form_fields[field].className+='form-box'
+        // }
+
+    </script>
+</body>
+
+</html>
