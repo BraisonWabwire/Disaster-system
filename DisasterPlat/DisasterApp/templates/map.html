@@ -1,0 +1,26 @@
+<!-- templates/map.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Map Example</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ 'AIzaSyDOHp9Wbc9hBu0lXAkpWO21sYSWCgZj-Ck' }}"></script>
+    <script type="">
+        function initMap() {
+            var location = { lat: {{ latitude }}, lng: {{ longitude }} };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: location
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</head>
+<body onload="initMap()">
+    <h1>Google Map Integration</h1>
+    <div id="map" style="height:500px;width:100%;"></div>
+</body>
+</html>

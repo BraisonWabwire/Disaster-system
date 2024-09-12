@@ -24,5 +24,7 @@ urlpatterns = [
     path('Register/', views.Register,name='Register'),
     path('login/', views.loginPage,name='login'),
     path('home/', views.home,name='home'),
+    path('logout/', views.logUserOut,name='logout'),
+    path('maps/', views.map_view,name='maps'),
 
 ]
